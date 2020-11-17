@@ -1,0 +1,122 @@
+// css reset
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, li, ol { list-style:none; } 
+a { text-decoration:none; } 
+a:hover { text-decoration:underline; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; }
+html, body { height: 100%; }
+
+@color: red;
+
+// 单行溢出省略号
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.overflow-ellips-230{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    width: 230px;
+    vertical-align: middle;
+}
+
+// 加载中
+.loading-text {
+    text-align: center;
+    margin-top: 60%;
+    color: #666666;
+    font-size: 14px;
+    image {
+        width: 90px;
+        height: 90px;
+        display: inline-block;
+    }
+}
+
+.loading-text-fixed {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+}
+
+.list-loading-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #666666;
+    font-size: 14px;
+    image {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: -30rpx;
+    }
+}
+
+// 骨架图
+.skeleton-animate {
+    -webkit-animation: skeleton-blink 1.2s ease-in-out infinite;
+    animation: skeleton-blink 1.2s ease-in-out infinite;
+}
+
+@-webkit-keyframes skeleton-blink {
+    50% {
+        opacity: .5
+    }
+}
+
+@keyframes skeleton-blink {
+    50% {
+        opacity: .5
+    }
+}
+
+.switch-btn {
+    animation: switch 1s ease-out infinite;
+}
+
+// 呼吸
+@keyframes switch {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   color: #999;
+}
+::-moz-placeholder { /* Firefox 19+ */
+   color: #999;
+}
+:-ms-input-placeholder { /* IE 10+ */
+   color: #999;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #999;
+}
+
+.van-picker__confirm{
+    color: #1678F9;
+}
+
+.van-picker__cancel {
+    color: #999;
+}

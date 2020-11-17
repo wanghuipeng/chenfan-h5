@@ -1,0 +1,8 @@
+src/api
+src/utils
+src/router/*.js
+src/main.js
+src/plugins
+src/registerServiceWorker.js
+src/views/home/*.vue
+src/views/resume/children/*
