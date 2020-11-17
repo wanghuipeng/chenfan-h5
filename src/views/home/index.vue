@@ -10,12 +10,18 @@
         </div>
       </div>
     </div>
+
+    <entryRecord v-if="visible" />
   </div>
 </template>
 
 <script>
+import entryRecord from '@/components/home/entryRecord'
 
 export default {
+  components: {
+    entryRecord
+  },
   data() {
     return {
       menuData:[{
@@ -65,13 +71,14 @@ export default {
           link:'',
           name:'离职办理'
         }]
-      }]
+      }],
+      visible:false
     }
   },
   methods:{
     operate(value){
       if(value === 'applyEntry'){ 
-
+          this.visible = true
       }
     }
   }
