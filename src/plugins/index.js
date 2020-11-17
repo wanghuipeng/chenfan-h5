@@ -4,13 +4,9 @@ import './vant'
 import './flexible'
 // 引入全局filter
 import './filters'
-// 引入全局storage
-import './storage'
 // 引入全局verify
 import './verify'
 // 引入微信sdk
 import './jsSdk'
 // 引入vconsole
 // import './vconsole'
-// 引入粘贴板
-import './clipboard'

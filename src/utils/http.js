@@ -3,8 +3,6 @@ import router from '@/router'
 import axios from 'axios'
 import { Toast } from 'vant';
 import Vue from 'vue'
-import Storage from 'vue-ls';
-Vue.use(Storage)
 axios.defaults.withCredentials = true
 axios.defaults.baseURL = '/api'
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
