@@ -81,7 +81,7 @@ export default {
         this.show = true
       } else if(value === 'beWorker' || value === 'beDimiss'){
         this.$router.push({name:'employeeList'})
-      }else { 
+      } else { 
         this.$router.push({name:value})
       }
     },

@@ -16,16 +16,28 @@
     </header>
    
     <div class="list">
-      <p class="title van-hairline--bottom">{{$route.meta.title}}</p>
-      <ul class="inner-list" v-if="activeIndex === 0">
-        <li v-for="i in 10" :key="i" @click="toDetail">
-          <p><label>高书院</label><span class="job">收银员</span></p>
-          <p>
-            <span>1326608302</span>
-            <span>2020-11-09</span>
-          </p>
-        </li>
-      </ul>
+      <p class="title van-hairline--bottom">员工列表</p>
+      <van-tree-select
+        :items="items"
+        height="125vw"
+        :main-active-index.sync="activeIndex"
+      >
+        <template #content>
+          <ul class="inner-list" v-if="activeIndex === 0">
+            <li v-for="i in 10" :key="i" @click="toDetail">
+              <p><label>高书院</label><span class="job">收银员</span></p>
+              <p>
+                <span>1326608302</span>
+                <span>2020-11-09</span>
+              </p>
+            </li>
+          </ul>
+          <van-image
+            v-if="activeIndex === 1"
+            src="https://img.yzcdn.cn/vant/apple-2.jpg"
+          />
+        </template>
+      </van-tree-select>
     </div>
   </div>
 </template>
@@ -52,9 +64,6 @@ export default {
     }
   },
   methods:{
-    entryCode(){
-      this.$router.push({name:'entryCode'})
-    },
     toDetail(){
       this.$router.push({name:'employeeDetail'})
     }

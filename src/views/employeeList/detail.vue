@@ -1,5 +1,5 @@
 <template>
-  <div class="my-record-page">
+  <div class="my-record-page employee-detail-page">
     <van-nav-bar
       :title="$route.meta.title"
       left-arrow
@@ -60,6 +60,66 @@
         <label>紧急联系号码</label>
         <span>2020-08-26</span>
       </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+
+
+
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p><p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+      <p>
+        <label>紧急联系号码</label>
+        <span>2020-08-26</span>
+      </p>
+    </div>
+
+    <div class="footer-btns">
+        <van-button class="default-btn ghost">取消入职</van-button>
+        <van-button class="default-btn">办理入职</van-button>
     </div>
   </div>
 </template>

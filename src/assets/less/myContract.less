@@ -1,0 +1,43 @@
+.my-contract-page {
+    background-color: #F8F9FA;
+    min-height: 100vh;
+    .list{
+        &.arrow{
+            li{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    margin-top: -8px;
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    background: url('~@/assets/images/common/arrow-r.png') no-repeat;
+                    background-size: 16px;
+                }
+            }
+        }
+        li{
+            margin-bottom: 8px;
+            background: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            &:active{
+              background: rgba(0,0,0,.1);
+            }
+            p{
+                &:first-child{
+                    color: #080F1A;
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+                &:nth-child(2){
+                    color:#A6AAB3;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+  }

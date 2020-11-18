@@ -5,11 +5,11 @@
       left-arrow
       @click-left="onClickLeft"
     />
-
-    <ul class="list">
-        <li v-for="i in 10" :key="i">
-            <p>客服岗位保密协议+劳动手册</p>
-            <p>2020-02-23至2020-08-27</p>
+    
+    <ul class="list arrow">
+        <li v-for="i in 10" :key="i" @click="toDetail">
+            <p>前台岗位入职初期培训方案</p>
+            <p>考核周期：15天</p>
         </li>
     </ul>
   </div>
@@ -25,7 +25,9 @@ export default {
     }
   },
   methods:{
-   
+    toDetail(){
+        this.$router.push({name:'entryProgramDetail'})
+    }
   }
 }
 </script>

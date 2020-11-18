@@ -1,0 +1,162 @@
+.employee-todo-page {
+    header{
+      padding: 20px;
+      .name{
+        position: relative;
+        span{
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 200px;
+          color: #080F1A;
+          font-size: 16px;
+          margin-bottom: 8px;
+          font-weight: bold;
+        }
+        i{
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          background: url('~@/assets/images/employeeList/location.png') no-repeat;
+          background-size: 16px;
+          vertical-align: 10px;
+          margin-left: 7px;
+        }
+      }
+      .mess{
+        color: #8B8F99;
+        font-size: 12px;
+        margin-bottom: 20px;
+        span{
+          margin-right: 28px;
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+      .entry-code{
+        .van-button__text::before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            left: 20px;
+            background: url('~@/assets/images/employeeList/code.png') no-repeat;
+            background-size: 20px;
+            vertical-align: -5px;
+            margin-right: 8px;
+        }
+      }
+    }
+    .list{
+      .title{
+        border-radius: 28px 28px 0px 0px;
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.07);
+        height: 54px;
+        line-height: 54px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        border-bottom-color: #F5F7FA;
+        &::before{
+          content: "";
+          vertical-align: -2px;
+          width: 5px;
+          height: 15px;
+          display: inline-block;
+          background: #F17C62;
+          border-radius: 2.5px;
+          margin-right: 4px;
+        }
+      }
+      .inner-list{
+          li{
+            padding: 16px 20px;
+            box-sizing: border-box;
+            position: relative;
+            background: #fff;
+            &::after{
+              content: "";
+              width: 24px;
+              height: 24px;
+              display: inline-block;
+              background: url('~@/assets/images/employeeList/arrow.png') no-repeat;
+              background-size: 24px;
+              position: absolute;
+              right:20px;
+              top: 50%;
+              margin-top: -12px;
+            }
+            &:active{
+              background: rgba(0,0,0,.1);
+            }
+            p{
+              &:first-child{
+                margin-bottom: 5px;
+                label{
+                  color: #080F1A;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+                .job{
+                  max-width: 100px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  color: #C2C5CC;
+                  font-size: 12px;
+                  margin-left: 8px;
+                }
+              }
+              &:last-child{
+                color: #41454D;
+                font-size: 11px;
+                span{
+                  margin-right: 20px;
+                  &::before{
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    margin-right: 2px;
+                  }
+                  &:first-child{
+                    &::before{
+                      background: url('~@/assets/images/employeeList/tel.png') no-repeat;
+                      background-size: 16px;
+                      vertical-align: -4px;
+                    }
+                  }
+                  &:last-child{
+                    margin-right: 0;
+                    &::before{
+                      background: url('~@/assets/images/employeeList/time.png') no-repeat;
+                      background-size: 16px;
+                      vertical-align: -3.5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+      }
+    }
+    .van-tree-select{
+      .van-sidebar{
+        width: 110px;
+        .van-sidebar-item{
+          padding: 15px 20px;
+          color: #8B8F99;
+          background-color: #F8F9FA;
+        }
+        .van-sidebar-item--select{
+          color: #080F1A;
+          font-weight: bold;
+          background-color: #fff;
+          &::before{
+            display: none;
+          }
+        }
+      }
+    }
+  }
