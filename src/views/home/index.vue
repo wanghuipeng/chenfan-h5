@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <entryRecord v-if="visible" />
+    <entry-record v-if="show" @closeDialog="closeDialog" />
   </div>
 </template>
 
@@ -72,14 +72,21 @@ export default {
           name:'离职办理'
         }]
       }],
-      visible:false
+      show:false
     }
   },
   methods:{
     operate(value){
-      if(value === 'applyEntry'){ 
-          this.visible = true
+      if(value === 'applyEntry'){ // 入职办理
+        this.show = true
+      } else if(value === 'beWorker' || value === 'beDimiss'){
+        this.$router.push({name:'employeeList'})
+      }else { 
+        this.$router.push({name:value})
       }
+    },
+    closeDialog(){
+      this.show = false
     }
   }
 }
@@ -119,6 +126,7 @@ export default {
         img{
           width: 52px;
           height: 52px;
+          margin-bottom: 2px;
         }
       }
     }

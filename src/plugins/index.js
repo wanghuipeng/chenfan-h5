@@ -6,6 +6,8 @@ import './flexible'
 import './filters'
 // 引入全局verify
 import './verify'
+// 引入全局mixins
+import './mixins'
 // 引入微信sdk
 import './jsSdk'
 // 引入vconsole

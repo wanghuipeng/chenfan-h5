@@ -3,6 +3,7 @@ src/utils
 src/router/*.js
 src/main.js
 src/plugins
+src/mixins
+src/components
 src/registerServiceWorker.js
-src/views/home/*.vue
-src/views/resume/children/*
+src/views
