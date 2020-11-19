@@ -12,6 +12,12 @@
             <p>考核周期：15天</p>
         </li>
     </ul>
+     
+    <!-- 空 -->
+    <!-- <div class="empty-list">
+      <img src="@/assets/images/common/empty.png">
+      <p>TA还没有可选的入职方案<br />请联系客服帮您添加哦</p>
+    </div> -->
   </div>
 </template>
 

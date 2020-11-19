@@ -48,6 +48,12 @@
           border-bottom: #F5F7FA;
           padding-bottom: 4px;
           display: flex;
+          &:last-child{
+            padding-bottom: 0;
+            &::after{
+              display: none;
+            }
+          }
           span{
             flex: 1;
             text-align: right;
