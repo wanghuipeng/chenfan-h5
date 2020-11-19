@@ -103,7 +103,7 @@
     </div>
 
     <div class="footer-btns">
-        <van-button class="default-btn" block>选择该方案</van-button>
+        <van-button class="default-btn" block @click="checkIt">选择该方案</van-button>
     </div>
   </div>
 </template>
@@ -118,7 +118,9 @@ export default {
     }
   },
   methods:{
-   
+    checkIt(){
+      this.$router.push({name:'entryInfo'})
+    }
   }
 }
 </script>

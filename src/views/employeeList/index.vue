@@ -15,18 +15,28 @@
       <van-button class="entry-code default-btn" block @click="entryCode">门店入职码</van-button>
     </header>
    
-    <div class="list">
-      <p class="title van-hairline--bottom">{{$route.meta.title}}</p>
-      <ul class="inner-list" v-if="activeIndex === 0">
-        <li v-for="i in 10" :key="i" @click="toDetail">
-          <p><label>高书院</label><span class="job">收银员</span></p>
-          <p>
-            <span>1326608302</span>
-            <span>2020-11-09</span>
-          </p>
-        </li>
-      </ul>
-    </div>
+    
+
+    <transition name="van-slide-up">
+      <div class="list" v-show="show">
+        <p class="title van-hairline--bottom">{{$route.meta.title}}</p>
+
+        <div class="loading-list" v-if="loading">
+          <van-loading size="24px" vertical>加载中...</van-loading>
+        </div>
+        <template v-else>
+          <ul class="inner-list" v-if="activeIndex === 0">
+            <li v-for="i in 10" :key="i" @click="toDetail">
+              <p><label>高书院</label><span class="job">收银员</span></p>
+              <p>
+                <span>1326608302</span>
+                <span>2020-11-09</span>
+              </p>
+            </li>
+          </ul>
+        </template>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -36,6 +46,8 @@ export default {
   },
   data() {
     return {
+      show:false,
+      loading:true,
       items:[
         { text: '待办理入职',id:1}, 
         { text: '待签约',id:2 },
@@ -50,6 +62,12 @@ export default {
       ],
       activeIndex: 0,
     }
+  },
+  mounted(){
+    this.show = true
+    setTimeout(()=>{
+      this.loading = false
+    },500)
   },
   methods:{
     entryCode(){

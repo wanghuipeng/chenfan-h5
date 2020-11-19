@@ -5,7 +5,7 @@
       left-arrow
       @click-left="onClickLeft"
     />
-
+    
     <ul class="list">
         <li v-for="i in 10" :key="i">
             <p>客服岗位保密协议+劳动手册</p>

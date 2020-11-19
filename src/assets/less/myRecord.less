@@ -3,7 +3,7 @@
       display: flex;
       padding: 20px;
       .left{
-        width: 84px;
+        width: 100px;
         color: #080F1A;
         display: inline-block;
         text-align: right;
@@ -12,10 +12,12 @@
         font-weight: 600;
       }
       .right{
+        flex: 1;
         p{
           &:first-child{
             color: #C2C5CC;
             font-size: 12px;
+            margin-top: 3px;
           }
           &:last-child{
             font-size: 12px;
@@ -28,7 +30,7 @@
       }
     }
     .form-text{
-      padding: 20px 20px 60px 20px;
+      padding: 20px 20px 70px 20px;
       &.pb-20{
         padding-bottom: 20px;
       }
@@ -70,6 +72,7 @@
         span{
           color: #41454D;
           line-height: 24px;
+          flex: 1;
         }
       }
     }

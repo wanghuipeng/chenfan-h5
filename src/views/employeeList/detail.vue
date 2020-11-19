@@ -64,62 +64,11 @@
         <label>紧急联系号码</label>
         <span>2020-08-26</span>
       </p>
-
-
-
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p><p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
-      <p>
-        <label>紧急联系号码</label>
-        <span>2020-08-26</span>
-      </p>
     </div>
 
     <div class="footer-btns">
-        <van-button class="default-btn ghost">取消入职</van-button>
-        <van-button class="default-btn">办理入职</van-button>
+        <van-button class="default-btn ghost" @click="cancelEntry">取消入职</van-button>
+        <van-button class="default-btn" @click="toEntry" :loading="btnLoading" loading-text="办理入职">办理入职</van-button>
     </div>
   </div>
 </template>
@@ -130,11 +79,23 @@ export default {
   },
   data() {
     return {
-     
+      btnLoading:false
     }
   },
+  mounted(){
+    
+  },
   methods:{
-   
+    cancelEntry(){
+      this.$router.push({name:"cancelEntry"})
+    },
+    toEntry(){
+      this.btnLoading = true
+      setTimeout(()=>{
+        this.btnLoading = false
+        this.$router.push({name:"toEntry"})
+      },500)
+    },
   }
 }
 </script>

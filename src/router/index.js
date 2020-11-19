@@ -10,11 +10,20 @@ const entryCode = r => require.ensure([], () => r(require('@/views/entryCode/ind
 const employeeDetail = r => require.ensure([], () => r(require('@/views/employeeList/detail.vue')), 'employeeDetail')
 const entryProgram = r => require.ensure([], () => r(require('@/views/entryProgram/index.vue')), 'entryProgram')
 const entryProgramDetail = r => require.ensure([], () => r(require('@/views/entryProgram/detail.vue')), 'entryProgramDetail')
+const cancelEntry = r => require.ensure([], () => r(require('@/views/employeeList/cancelEntry.vue')), 'cancelEntry')
+const toEntry = r => require.ensure([], () => r(require('@/views/employeeList/toEntry.vue')), 'toEntry')
+const entryInfo = r => require.ensure([], () => r(require('@/views/employeeList/entryInfo.vue')), 'entryInfo')
 
 Vue.use(VueRouter)
 
 const routes = [
     // 首页
+    {
+        path: '/',
+        name: 'home',
+        component: home,
+        redirect: '/home'
+    },
     {
         path: '/home',
         name: 'home',
@@ -90,6 +99,33 @@ const routes = [
         component: entryProgramDetail,
         meta: {
             title: '方案详情'
+        }
+    },
+    // 取消入职
+    {
+        path: '/cancelEntry',
+        name: 'cancelEntry',
+        component: cancelEntry,
+        meta: {
+            title: '取消入职'
+        }
+    },
+    // 办理入职
+    {
+        path: '/toEntry',
+        name: 'toEntry',
+        component: toEntry,
+        meta: {
+            title: '办理入职'
+        }
+    },
+    // 提交入职信息
+    {
+        path: '/entryInfo',
+        name: 'entryInfo',
+        component: entryInfo,
+        meta: {
+            title: '提交入职信息'
         }
     },
 ]

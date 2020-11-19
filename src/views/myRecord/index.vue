@@ -13,7 +13,7 @@
           <span>收银员</span>
           <span>上海市浦东新区上海市浦东新区</span>
         </p>
-        <p class="current">待办理入职</p>
+        <p class="current" @click="()=>{this.$router.push({name:'entryProgram'})}">待办理入职</p>
       </div>
     </header>
     

@@ -1,6 +1,8 @@
 <template>
   <div class="home-page">
-    <div class="banner"></div>
+    <div class="banner">
+      <img src="@/assets/images/home/banner.png">
+    </div>
     <div class="menu" v-for="(item,index) in menuData" :key="index">
       <p class="title">{{item.title}}</p>
       <div class="list">
@@ -10,7 +12,7 @@
         </div>
       </div>
     </div>
-
+    
     <entry-record v-if="show" @closeDialog="closeDialog" />
   </div>
 </template>
@@ -94,13 +96,13 @@ export default {
 <style lang="less">
 .home-page {
   .banner{
-    height: 180px;
+    margin-bottom: 16px;
+    img{
+      height: 180px;
+    }
   }
   .menu{
-    padding: 32px 20px;
-    &:last-child{
-      padding-top: 0;
-    }
+    padding: 16px 20px;
     .title{
       font-size: 16px;
       color: #080F1A;

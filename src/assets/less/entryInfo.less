@@ -1,0 +1,54 @@
+.to-entry-page{
+    .van-form{
+      padding: 20px;
+      box-sizing: border-box;
+      .van-field{
+          padding: 0;
+          margin-bottom: 20px;
+          &.arrow-r{
+            .van-field__body{
+                &::after{
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    background: url('~@/assets/images/common/arrow_d.png') no-repeat;
+                    background-size: 16px;
+                }
+            }
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+          &::after{
+            display: none;
+          }
+          .van-field__label{
+            align-self: center;
+            color: #8B8F99;
+            margin-right: 8px;
+            width: 85px;
+          }
+          .van-field__body{
+            padding: 12px;
+            box-sizing: border-box;
+            position: relative;
+            padding: 12px;
+            &::before{
+              content: ' ';
+              position: absolute;
+              box-sizing: border-box;
+              pointer-events: none;
+              top: -50%;
+              right: -50%;
+              bottom: -50%;
+              left: -50%;
+              border: 1px solid #E5E5E5;
+              border-radius: 8px;
+              -webkit-transform: scale(.5);
+              transform: scale(.5);
+            }
+          }
+      }
+    }
+}
