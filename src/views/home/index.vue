@@ -7,7 +7,8 @@
       <p class="title">{{item.title}}</p>
       <div class="list">
         <div class="item" v-for="(e,i) in item.list" :key="i" @click="operate(e.value)">
-          <img :src="e.img">
+          <img :src="e.img" @load="loadImage" v-show="showImage">
+          <div class="img-div" v-show="!showImage"></div>
           <p>{{e.name}}</p>
         </div>
       </div>
@@ -74,10 +75,18 @@ export default {
           name:'离职办理'
         }]
       }],
-      show:false
+      show:false,
+      showImage:false
     }
   },
+  mounted(){
+    console.log('图片加载')
+  },
   methods:{
+    loadImage(e){
+      console.log(e)
+      this.showImage = true
+    },
     operate(value){
       if(value === 'applyEntry'){ // 入职办理
         this.show = true
@@ -125,10 +134,16 @@ export default {
         margin-top: 20px;
         width: 33.33%;
         text-align: center;
-        img{
+        img,.img-div{
           width: 52px;
           height: 52px;
           margin-bottom: 2px;
+        }
+        .img-div{
+          display: inline-block;
+          border-radius: 8px;
+          background: #f5f5f5;
+          opacity: .5;
         }
       }
     }
