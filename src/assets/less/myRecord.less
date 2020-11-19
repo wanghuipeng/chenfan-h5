@@ -29,12 +29,32 @@
     }
     .form-text{
       padding: 20px 20px 60px 20px;
+      &.pb-20{
+        padding-bottom: 20px;
+      }
+      h3{
+        color: #080F1A;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
       p{
         display: flex;
         margin-bottom: 12px;
         font-size: 14px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &.line{
+          border-bottom: #F5F7FA;
+          padding-bottom: 4px;
+          display: flex;
+          span{
+            flex: 1;
+            text-align: right;
+          }
+        }
         label{
-          min-width: 86px;
+          width: 100px;
           color: #A6AAB3;
           display: inline-block;
           text-align: right;

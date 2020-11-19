@@ -6,47 +6,47 @@
       @click-left="onClickLeft"
     />
 
-    <div class="form-text">
+    <div class="form-text pb-20">
       <h3>基本信息：</h3>
       <p>
-        <label>入职日期</label>
+        <label>方案名称</label>
         <span>2020-08-26</span>
       </p>
       <p>
-        <label>考核期止</label>
+        <label>考核期长度</label>
         <span>2020-08-26</span>
       </p>
       <p>
-        <label>手机号码</label>
+        <label>考核期合同</label>
         <span>2020-08-26</span>
       </p>
       <p>
-        <label>身份证号码</label>
+        <label>转正后合同</label>
         <span>2020-08-26</span>
       </p>
       <p>
-        <label>银行卡号</label>
+        <label>薪资组</label>
         <span>2020-08-26</span>
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <div class="form-text">
+    <div class="form-text pb-20">
       <h3>商保信息：</h3>
       <p>
         <label>是否参加商保</label>
         <span>是</span>
       </p>
-      <p>
+      <p class="line van-hairline--bottom">
         <label>人身意外险</label>
         <span>考核期开始缴纳</span>
       </p>
-      <p>
+      <p class="line van-hairline--bottom">
         <label>财产意外险</label>
         <span>考核期开始缴纳</span>
       </p>
-      <p>
+      <p class="line van-hairline--bottom">
         <label>其他保险</label>
         <span>2020-08-26</span>
       </p>
@@ -54,9 +54,56 @@
 
     <div class="divider"></div>
 
+    <div class="form-text">
+      <h3>社保信息：</h3>
+      <p>
+        <label>是否参加社保</label>
+        <span>是</span>
+      </p>
+      <p>
+        <label>参保时间节点</label>
+        <span>是</span>
+      </p>
+      <p>
+        <label>社保参保方案</label>
+        <span>是</span>
+      </p>
+      <p class="line van-hairline--bottom">
+        <label>养老保险基数</label>
+        <span>考核期开始缴纳</span>
+      </p>
+      <p class="line van-hairline--bottom">
+        <label>医疗保险基数</label>
+        <span>考核期开始缴纳</span>
+      </p>
+      <p class="line van-hairline--bottom">
+        <label>失业保险基数</label>
+        <span>2020-08-26</span>
+      </p>
+      <p class="line van-hairline--bottom">
+        <label>生育保险基数</label>
+        <span>2020-08-26</span>
+      </p>
+      <p class="line van-hairline--bottom">
+        <label>大病医疗基数</label>
+        <span>2020-08-26</span>
+      </p>
+      <p class="line van-hairline--bottom">
+        <label>残保金基数</label>
+        <span>2020-08-26</span>
+      </p>
+      <p class="line van-hairline--bottom">
+        <label>公积金基数</label>
+        <span>2020-08-26</span>
+      </p>
+      <p class="line van-hairline--bottom">
+        <label>补充公积金基数</label>
+        <span>2020-08-26</span>
+      </p>
+    </div>
+
     <div class="footer-btns">
-        <van-button class="default-btn ghost">取消入职</van-button>
-        <van-button class="default-btn">办理入职</van-button>
+        <van-button class="default-btn" block>选择该方案</van-button>
     </div>
   </div>
 </template>
@@ -77,10 +124,5 @@ export default {
 </script>
 <style lang="less">
 @import '~@/assets/less/myRecord.less';
-.entry-program-detail-page{
-   h3{
-       
-   }
-}
 </style>
 
