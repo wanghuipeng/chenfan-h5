@@ -14,7 +14,9 @@
       </div>
     </div>
     
-    <entry-record v-if="show" @closeDialog="closeDialog" />
+    <transition name="van-fade">
+      <entry-record v-if="show" @closeDialog="closeDialog" />
+    </transition>
   </div>
 </template>
 
@@ -104,10 +106,14 @@ export default {
 </script>
 <style lang="less">
 .home-page {
+  padding-bottom: 16px;
+  box-sizing: border-box;
   .banner{
     margin-bottom: 16px;
     img{
       height: 180px;
+      width: 100%;
+      object-fit: contain;
     }
   }
   .menu{

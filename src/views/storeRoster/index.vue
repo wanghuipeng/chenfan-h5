@@ -27,6 +27,7 @@
             :items="items"
             height="125vw"
             :main-active-index.sync="activeIndex"
+            @click-nav="clickNav"
           >
             <template #content>
               <ul class="inner-list" v-if="activeIndex === 0">
@@ -47,6 +48,8 @@
         </template>
       </div>
     </transition>
+    
+    <van-loading size="34" v-if="vanLoading" class="fixed-loading" />
   </div>
 </template>
 
@@ -56,6 +59,7 @@ export default {
   },
   data() {
     return {
+      vanLoading:false,
       show:false,
       loading:true,
       items:[
@@ -86,6 +90,13 @@ export default {
     entryCode(){
       this.$router.push({name:'entryCode'})
     },
+    clickNav(e){
+      this.vanLoading = true
+      setTimeout(()=>{
+        this.vanLoading = false
+      },500)
+      console.log(e)
+    }
   }
 }
 </script>

@@ -14,8 +14,6 @@
       </p>
       <van-button class="entry-code default-btn" block @click="entryCode">门店入职码</van-button>
     </header>
-   
-    
 
     <transition name="van-slide-up">
       <div class="list" v-show="show">
@@ -37,6 +35,7 @@
         </template>
       </div>
     </transition>
+    
   </div>
 </template>
 
