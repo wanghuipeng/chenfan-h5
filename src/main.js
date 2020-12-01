@@ -5,7 +5,7 @@ import router from './router'
 import store from './store'
 import '@/plugins'
 // 引入路由权限控制
-// import '@/permission';
+import '@/permission';
 // 引入公共样式
 import './assets/iconfont/iconfont.css';
 import '@/assets/less/common.less'
