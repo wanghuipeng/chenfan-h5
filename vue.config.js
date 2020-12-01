@@ -76,7 +76,7 @@ module.exports = {
         proxy: {
             '/api': {
                 // target: 'https://h.dalieyingcai.com', // prod
-                target: 'https://c.hh.dalie.zpstar.com', // test
+                target: 'http://c.hhd.dalie.zpstar.com', // test
                 pathRewrite: {
                     '^/api': '/api'
                 }

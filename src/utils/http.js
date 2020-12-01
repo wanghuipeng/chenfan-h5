@@ -13,7 +13,7 @@ let messageBoxAlertLock = false; // 登录超时弹窗锁
 // 添加请求拦截器
 axios.interceptors.request.use((config) => {
     // 在发送请求之前做些什么
-    const token = Vue.ls.get('x-client-token')
+    const token = Vue && Vue.ls && Vue.ls.get('x-client-token')
     if (token) {
         config.headers['x-client-token'] = token // 让每个请求携带自定义 token 请根据实际情况自行修改
     }
@@ -79,7 +79,8 @@ axios.interceptors.response.use((response) => {
         }
     }
 }, (err) => {
-    // 对响应错误做点什么
+    console.log(err)
+        // 对响应错误做点什么
     switch (err.response.status) {
         case 404:
             Toast({

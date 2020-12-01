@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+const login = r => require.ensure([], () => r(require('@/views/login/index.vue')), 'login')
 const home = r => require.ensure([], () => r(require('@/views/home/index.vue')), 'home')
 const myRecord = r => require.ensure([], () => r(require('@/views/myRecord/index.vue')), 'myRecord')
 const myContract = r => require.ensure([], () => r(require('@/views/myContract/index.vue')), 'myContract')
@@ -28,6 +29,12 @@ const routes = [
         path: '/home',
         name: 'home',
         component: home
+    },
+    // 登录注册
+    {
+        path: '/login',
+        name: 'login',
+        component: login
     },
     // 我的档案
     {
