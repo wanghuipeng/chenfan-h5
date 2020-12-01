@@ -6,6 +6,7 @@
     <van-form @submit="onSubmit">
       <van-field
         v-model="phone"
+        maxlength="11"
         center
         clearable
         type="tel"
@@ -14,6 +15,7 @@
       />
       <van-field
         v-model="imgSms"
+        maxlength="4"
         center
         clearable
         placeholder="图形验证码"
@@ -29,27 +31,30 @@
         v-model="sms"
         center
         clearable
+        maxlength="6"
         placeholder="短信验证码"
         :rules="[{ required: true, message: '请输入短信验证码' }]"
       >
         <template #button>
-          <van-button
+          <p
             v-show="sendAuthCode"
             size="small"
             type="primary"
             class="default-btn ghost send-btn"
             @click="sendVeriCode"
-            >{{ flag ? "发送验证码" : "重新获取" }}</van-button
           >
-          <van-button
+            {{ flag ? "发送验证码" : "重新获取" }}
+          </p>
+          <p
             v-show="!sendAuthCode"
             size="small"
             type="primary"
             class="default-btn ghost send-btn"
             disabled
-            ><span>{{ authTime }}</span
-            >秒后重新获取</van-button
           >
+            <span>{{ authTime }}</span
+            >秒后重新获取
+          </p>
         </template>
       </van-field>
       <div class="btn-footer">
@@ -59,6 +64,7 @@
           native-type="submit"
           :loading="btnLoading"
           loading-text="注册账号"
+          :disabled="!(phone && imgSms && sms)"
           >注册账号</van-button
         >
       </div>
@@ -74,6 +80,7 @@ export default {
   components: {},
   data() {
     return {
+      disabled: true,
       vanLoading: false,
       btnLoading: false,
       phone: "",
@@ -91,6 +98,7 @@ export default {
   methods: {
     // 注册
     onSubmit(values) {
+      this.btnLoading = true;
       setTimeout(() => {
         this.btnLoading = false;
         console.log("submit", values);
